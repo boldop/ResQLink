@@ -22,5 +22,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/products', AllProduct.as_view(), name='Productlist'),
     path('api/category', AllCategory.as_view(), name='Categorylist'),
+    path('api/createcategory', createCategory.as_view(), name='createCategory'),
+    path('api/updatedeletecategory/<int:pk>/', updatedeleteCategory.as_view(), name='updatedeleteCategory'),
+    path('api/createproduct', createProduct.as_view(), name='createProduct'),
+    path('api/updatedeleteproduct/<int:pk>/', updatedeleteProduct.as_view(), name='updatedeleteProduct'),
 
 ]
